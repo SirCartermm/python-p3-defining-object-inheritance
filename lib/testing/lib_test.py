@@ -1,14 +1,5 @@
-import unittest
 from lib.car import Car
 
-class TestCar(unittest.TestCase):
-    def test_car_instantiation(self):
-        car = Car(16, 4)
-        self.assertIsInstance(car, Car)
-
-    def test_car_go(self):
-        car = Car(16, 4)
-        self.assertEqual(car.go(), "VRRROOOOOOOOOOOOOOOOOOOOOOOM!!!!!")
-
-if __name__ == '__main__':
-    unittest.main()
+def test_car_description():
+    my_car = Car("Toyota", "Corolla", 2015, 4)
+    assert my_car.description() == "2015 Toyota Corolla with 4 doors"
